@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>FirstSite</title>
+</head>
+<body>
+    
+    <marquee id="mar">.....this the registration form! which reflects the data in tabular format.....</marquee>
+   
+    <div class="forminput" id="fi">
+        <div class="main">
+            <div class="form">
+    <form id="user-form">
+        <h3>Fill the form!</h3>
+        <img src="profile.webp" alt="" id="img" width="100px" height="=100px"><br>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password"><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob" max="2004-09-06" min="1967-09-06"><br>
+        <input type="checkbox" name="acceptTerms" id="acceptTerms"><label for="acceptTerms">Accept terms & Conditions</label><br>
+        <input value="Submit" type="submit">
+    </form>
+    </div>
+</div></div>
+    <div id="entrytbale" align="center">
+        
+    </div>
+    <script src="./script.js">
+            const email1 = document.getElementById('email');
+            email1.addEventListener('input',()=>validate(email1));
+            function validate(element){
+                if(element.validity.typeMismatch){
+                    element.setCustomValidity("this email not in perfect format...");
+                    element.reportValidity();
+                }
+                else{
+                    element.setCustomValidity("");
+                }
+            }
+    </script>
+</body>
+</html>
